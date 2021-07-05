@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpHeaderResponse, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { GaugeModule } from 'angular-gauge';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,12 +17,15 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { HomeComponent } from './components/home/home.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptors';
 import { HttpErrosInterceptors } from './interceptors/http-errors.interceptors';
+import { DetailsComponent } from './components/details/details.component';
+import { GaugeModule } from 'angular-gauge';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     HomeComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,10 +34,10 @@ import { HttpErrosInterceptors } from './interceptors/http-errors.interceptors';
     HttpClientModule,
     FormsModule,
     MatTabsModule,
-    GaugeModule,
     MatIconModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    GaugeModule.forRoot(),
   ],
   providers: [
     {
