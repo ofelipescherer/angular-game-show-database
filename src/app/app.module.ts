@@ -19,6 +19,7 @@ import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptors
 import { HttpErrosInterceptors } from './interceptors/http-errors.interceptors';
 import { DetailsComponent } from './components/details/details.component';
 import { GaugeModule } from 'angular-gauge';
+import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GaugeModule } from 'angular-gauge';
     SearchBarComponent,
     HomeComponent,
     DetailsComponent,
+    GameTabsComponent,
   ],
   imports: [
     BrowserModule,

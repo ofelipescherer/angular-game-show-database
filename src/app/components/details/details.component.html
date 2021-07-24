@@ -1,5 +1,5 @@
 <div class="details">
-  <div class="game-banner">
+  <div class="game-banner" *ngIf="game.background_image">
     <img 
       src="{{ game.background_image }}"
       alt="alt"
@@ -37,7 +37,7 @@
         </div>
       </div>
       <!-- HERE WILL GO TABS-->>
-      <app-game-tabs></app-game-tabs>
+      <app-game-tabs [game]="game"></app-game-tabs>
     </div>
   </div>
 </div>
